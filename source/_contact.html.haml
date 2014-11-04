@@ -1,0 +1,26 @@
+%section#contact.dark-bg.light-typo.padding-top-bottom
+  %div.container
+    %header.section-header.text-center
+      %h1 
+        Contact
+      %p
+        Feel free to drop me a line
+
+      %form#contact-form.bl_form.text-center{ :action => "contact.php", :method => "post", :novalidate => "novalidate" }
+        %span.field-wrap
+          %label.control-label{ :for => "contact-name" }
+            Name
+          %input#contact-name.label_better.requiredField{ :name => "contactName", :type => "text", :placeholder => "Name", :data => { "new-placeholder" => "Name",  "error-empty" => "*Enter your name" } }
+        %span.field-wrap
+          %label.control-label{ :for => "contact-mail" }
+            Email
+          %input#contact-mail.label_better.requiredField{ :name => "email", :type => "email", :placeholder => "Email Address", :data => { "new-placeholder" => "Email Address", "error-empty" => "*Enter your email", "error-invalid" => "x Invalid email address" } }
+        %span.field-wrap
+          %label.control-label{ :for => "contact-message" }
+            Message
+          %textarea#contact-message.label_better.requiredField{ :name => "comments", :rows => "1", :placeholder => "Message", :data => { "new-placeholder" => "Message", "error-empty" => "*Enter your message" } }
+        %p.text-center
+          %button.btn.btn-meflat.icon-left{ :name => "submit", :type => "submit", :data => { "error-message" => "Error!", "sending-message" => "Sending...", "ok-message " => "Message Sent" } }
+            %i.fa.fa-location-arrow
+            Send Message
+        %input#submitted{ :type => "hidden", :name => "submitted", :value => "true" }
