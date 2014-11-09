@@ -6,12 +6,13 @@
   .section
     = partial "community"
 
-  .col-sm-4
-    %a.btn.btn-default{ :data => { :target => "#education" } }
-      Education
-  .col-sm-4
-    %a.btn.btn-default{ :data => { :target => "#experience" } }
-      Experience
-  .col-sm-4
-    %a.btn.btn-default{ :data => { :target => "#community" } }
-      Community
+  .actions
+    .col-sm-6
+      %a.btn.btn-default{ :data => { :target => "#education" } }
+        Education
+    .col-sm-6
+      %a.btn.btn-default{ :data => { :target => "#experience" } }
+        Experience
+
+  %a.left
+     

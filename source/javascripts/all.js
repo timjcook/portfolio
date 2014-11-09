@@ -1,5 +1,11 @@
-//= require_tree .
-
 $(document).on("ready", function() {
-  console.log("123")
+  $(document).on("click", "#scroller a", function() {
+    var target = $(this).data("target")
+    var section = $(target)
+    console.log(section.parent())
+    console.log($("#scroller .active").parent())
+
+    $("#scroller .active").removeClass("active")
+    section.parent().addClass("active")
+  })
 })
