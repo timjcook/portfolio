@@ -1,12 +1,7 @@
-#scroller {
-  .section {
-    height: 400px;
-    display: none; 
-  }
-  .actions {
-    text-align: center;
-  }
-  .section.active {
-    display: block; 
-  }
+i.icon-heading {
+  font-size: 3em;
+}
+.service-heading:hover {
+  color: #38A5DB;
+  transition: all 0.3s ease-out 0s;
 }
